@@ -1,0 +1,13 @@
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main {
+  background: #5E5694;
+}
+.good-min-cart
+{
+  width: 25%;
+  background: #42b983;
+
+}
