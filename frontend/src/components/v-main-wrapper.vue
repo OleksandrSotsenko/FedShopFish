@@ -1,15 +1,16 @@
 <template>
   <div class="v-main-wrapper">
-    <p>{{title}}</p>
-    <v-catalog/>
-    <v-cart/>
+    <keep-alive>
+    <router-view/>
+    </keep-alive>
   </div>
 </template>
 
 
 <script>
-  import vCatalog from './v-catalog'
-  import vCart from './v-cart'
+  import vCatalog from './v-catalog.vue'
+  import vCart from './v-cart.vue'
+  import {mapGetters} from 'vuex'
 
   export default {
     name: 'v-main-wrapper',
@@ -19,11 +20,13 @@
     },
     props: {},
     data(){
-      return{
-        title: 'Main wrapper'
-      }
+      return{}
     },
-    computed: {},
+    computed: {
+      ...mapGetters([
+        'CART'
+      ])
+    },
     methods: {},
     watch: {},
   }

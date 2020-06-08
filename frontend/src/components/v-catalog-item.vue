@@ -1,12 +1,15 @@
 <template>
   <div class="v-catalog-item">
-    <img src="" alt="img">
+    <img src="../assets/logo.png" alt="img">
     <p class="v-catalog-item_name">{{product_data.name}}</p>
-    <p class="v-catalog-item_price">Price: {{product_data.price}}</p>
-    <button class="v-catalog-item_add_to_cart_btn btn">Add to cart</button>
+    <p class="v-catalog-item_price">Price: {{product_data.price}}$</p>
+    <button
+      class="v-catalog-item_add_to_cart_btn btn"
+      @click="addToCart">
+      Add to cart
+    </button>
   </div>
 </template>
-
 
 <script>
   export default {
@@ -25,6 +28,11 @@
       }
     },
     computed: {},
+    methods:{
+      addToCart(){
+        this.$emit('addToCart',this.product_data);
+      }
+    }
   }
 </script>
 

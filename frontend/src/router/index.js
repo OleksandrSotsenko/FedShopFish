@@ -1,21 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../views/Home'
-import Catalog from '../views/Catalog'
+import vCart from '../components/v-cart.vue'
+import vCatalog from '../components/v-catalog'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'catalog',
+      component: vCatalog
     },
     {
-      path: '/catalog',
-      name: 'catalog',
-      component: Catalog
+      path: '/cart',
+      name: 'cart',
+      component: vCart,
+      props: true
     }
-  ]
+    ]
 })
+

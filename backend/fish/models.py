@@ -22,6 +22,7 @@ class Fish(models.Model):
     life = models.IntegerField(blank=True)
     photo = models.ImageField(verbose_name='Photo', upload_to='fish/', blank=True)
     eating = models.CharField(max_length=150, blank=True)
+    price = models.IntegerField(blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

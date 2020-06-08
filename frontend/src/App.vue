@@ -1,32 +1,25 @@
 <template>
   <div id="app">
-    <Myheader></Myheader>
     <h1>Fish Shop</h1>
-    <router-view></router-view>
     <h2>Fish Catalog</h2>
-    <Myfooter></Myfooter>
     <vMainWrapper></vMainWrapper>
   </div>
 </template>
 
 <script>
-import Myheader from './components/Myheader.vue'
-import Myfooter from './components/Myfooter.vue'
 import vMainWrapper from './components/v-main-wrapper'
 
 export default {
   components:
     {
       vMainWrapper,
-      Myheader,
-      Myfooter,
     },
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      fishes: [],
     }
-  }
+  },
 }
 </script>
 

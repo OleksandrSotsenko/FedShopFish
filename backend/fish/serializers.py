@@ -10,10 +10,12 @@ class FishSerializer(serializers.ModelSerializer):
     class Meta:
         model = Fish
         fields = [
+            'id',
             'owner',
             'name',
             'colors',
             'life',
             'photo',
             'eating',
+            'price'
         ]
